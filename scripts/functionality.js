@@ -93,7 +93,7 @@ function passengerInfo() {
         let inputNum = event.target.value;
         console.log(inputNum.length);
 
-        if (inputNum.length !== 0 && selectList.length !==0) {
+        if (inputNum.length !== 0) {
             nextBtn.removeAttribute('disabled');
 
             document.getElementById('modal-btn').addEventListener('click', function (event) {
