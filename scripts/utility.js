@@ -25,14 +25,14 @@ function removeBackgroundColorById(elementId) {
 
 
 
-// changes text-color on click or other events
+// changes text element color on click or other events
 function setTextColorById(elementId) {
     const element = document.getElementById(elementId);
     element.classList.remove('text-[#03071280]');
     element.classList.add('text-white');
 }
 
-// changes text-color on click or other events
+// changes text element color on click or other events
 function removeTextColorById(elementId) {
     const element = document.getElementById(elementId);
     element.classList.remove('text-white');

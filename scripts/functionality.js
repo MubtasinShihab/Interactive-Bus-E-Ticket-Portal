@@ -51,9 +51,9 @@ function couponApply() {
 
         const inputText = event.target.value;
 
-        const couponBtn = document.getElementById('coupon-btn');
+        const couponBtn = document.getElementById('coupon-btn'); 
 
-        if (inputText === 'NEW15' || inputText === 'Couple 20') {
+        if (inputText === 'NEW15' || inputText === 'Couple 20') { // applying coupon
 
             couponBtn.removeAttribute('disabled'); // Apply button enabled
 
@@ -64,12 +64,12 @@ function couponApply() {
 
                 // change of grand total after applying coupon
                 if (inputText === 'NEW15') {
-                    let grand15 = getElementTextValueById('grand-total');
+                    let grand15 = parseInt(getElementTextValueById('grand-total'));
                     grand15 = grand15 - ((grand15 * 15)/100);
                     setElementTextValueById('grand-total', grand15);
                 }
                 else if (inputText === 'Couple 20') {
-                    let grand20 = getElementTextValueById('grand-total');
+                    let grand20 = parseInt(getElementTextValueById('grand-total'));
                     grand20 = grand20 - (grand20 / 5);
                     setElementTextValueById('grand-total', grand20);
                 }
@@ -82,7 +82,7 @@ function couponApply() {
     })
 }
 
-// Passenger info, (at least one seat select remaining), phone no input, next btn enable, moral
+// Passenger info, select at least one seat, phone no. input, next btn enable, moral
 function passengerInfo() {
 
     let phoneInput = document.getElementById('phone-input');
@@ -91,9 +91,8 @@ function passengerInfo() {
     phoneInput.addEventListener('keyup', function (event) {
 
         let inputNum = event.target.value;
-        console.log(inputNum.length);
 
-        if (inputNum.length !== 0 && selectList.length !==0) {
+        if (inputNum.length !== 0 && selectList.length !==0) { // checks for both condition of button click and number input
             nextBtn.removeAttribute('disabled');
 
             document.getElementById('modal-btn').addEventListener('click', function (event) {
