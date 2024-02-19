@@ -65,7 +65,7 @@ function couponApply() {
                 // change of grand total after applying coupon
                 if (inputText === 'NEW15') {
                     let grand15 = getElementTextValueById('grand-total');
-                    grand15 = grand15 - (grand15 * 0.15);
+                    grand15 = grand15 - ((grand15 * 15)/100);
                     setElementTextValueById('grand-total', grand15);
                 }
                 else if (inputText === 'Couple 20') {
